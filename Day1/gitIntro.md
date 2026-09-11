@@ -38,7 +38,7 @@ You will also need the unix command git to work on your local machine.
 ----------------------------------------------------------------------
 #### <a name="versioning"></a>Slow down. What is a "versioning system"?
 
-Ah, sorry. Imagine you are working on a document, and you want to save your old versions in case you want to go back to one of them if your plans change, or if your computer breaks down. You'd end up with a series of files called, for example, `ms.v1.tex`, `ms.v2.tex`, `ms.v3.tex`, `ms.final.tex`, `ms.final2.tex`, `ms.submitted.tex` and so on. A versioning system is a computer program that does this for you. It allows you to work on one file, `ms.tex`, while keeping track of all your old versions. It allows you to go back to them if you want. It also handles that situation where your collaborator makes some changes and sends you ms.v1.pjm.tex,<em>after</em> you have moved on to ms.v2.tex: it <em>merges</em> the two files together for you. Let's compare some basic usage of the git versioning system with your old way of doing things.
+Ah, sorry. Imagine you are working on a document, and you want to save your old versions in case you want to go back to one of them if your plans change, or if your computer breaks down. You'd end up with a series of files called, for example, `ms.v1.tex`, `ms.v2.tex`, `ms.v3.tex`, `ms.final.tex`, `ms.final2.tex`, `ms.submitted.tex` and so on. A versioning system is a computer program that does this for you. It allows you to work on one file, `ms.tex`, while keeping track of all your old versions. It allows you to go back to them if you want. It also handles that situation where your collaborator makes some changes and sends you ms.v1.pjm.tex, <em>after</em> you have moved on to ms.v2.tex: it <em>merges</em> the two files together for you. Let's compare some basic usage of the git versioning system with your old way of doing things.
 
 <table>
   <tbody>
@@ -256,7 +256,7 @@ Now, suppose you want to submit your version of the document to a journal. You t
   </tbody>
 </table>
 
-Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("konflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a `git checkout` can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The `git status` command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
+Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("conflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a `git checkout` can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The `git status` command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
 
 As you might have guessed, `git pull` is actually a shortcut to two commands one after the other: `git fetch` (to get any new commits from the remote repository) and `git merge` (to merge the files in the remote branch with the current local one). Unlike with doing things by hand, it's actually quite hard to over-write files and lose work. Git will not let you pull in other people's changes until you have committed yours, and it will not let you push your changes to a remote repository until you have first pulled its changes in and merged them. And finding old versions by your commented history is much easier than trying to remember the meaning of your own filenames!
 
@@ -289,7 +289,7 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 ----------------------------------------------------------------------
 #### <a name="committing"></a>How do I commit my edits?
 
-Git has a commit command, just like svn: mostly you will use it as phollows: `git commit -am "comment"`
+Git has a commit command, just like svn: mostly you will use it as follows: `git commit -am "comment"`
 
 The `-a` commits all changes. You can see what what you are about to commit by doing `git status`. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
@@ -303,9 +303,9 @@ To see all the remotes that you have access to, type `git remote -v`.
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
+#### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error messinge tells you which files contain the konflict.
+Fix it. The error messinge tells you which files contain the conflict.
 Open them in an editor and search for the string
 '&gt;&gt;&gt;&gt;&gt;&gt;'. The portion of code
 between this string and the '======' mark is the remote version, while
@@ -372,7 +372,7 @@ you want to be able to keep up with your projekts!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence phollow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
-Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private. They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
+Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private. They can also submit issues. This is a good thing: it provides a means for anyone to give you feedback about your project, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort. 
 
 Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo, and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
