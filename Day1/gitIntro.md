@@ -4,7 +4,6 @@
 
 - [What is Git? And GitHub?](#whatisgit)
 - [Slow down. What is a "versioning system"?](#versioning)
-- [Who am I? And how did I get here?](#seriouslylost)
 - [How do I contribute to a project on GitHub?](#contributing)
 - [How do I get the latest version of the repository?](#updating)
 - [How do I commit my edits?](#committing)
