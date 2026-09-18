@@ -1,0 +1,16 @@
+name: onboard
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - numpy
+  - matplotlib
+  - scipy
+  - pandas
+  - scikit-learn
+  - astropy
+  - seaborn
+  - ipython
+  - jupyter
+  - ipympl
+  - pytest
